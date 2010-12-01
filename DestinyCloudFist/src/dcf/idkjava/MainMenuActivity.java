@@ -12,4 +12,6 @@ public class MainMenuActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.mainmenu);
 	}
+	
+	//TODO: Implement buttons here
 }
