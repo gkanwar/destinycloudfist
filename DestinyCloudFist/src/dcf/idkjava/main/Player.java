@@ -5,13 +5,12 @@ import java.util.ArrayList;
 public class Player
 {
 	//The name of the player
-	String m_name;
+	private String m_name;
+	private int m_income;
 	//Is the player human?
-	boolean m_isHuman;
+	private boolean m_isHuman;
 	//Territories owned
-	ArrayList<Territory> m_terrs;
-	//Continents owned
-	ArrayList<Continent> m_conts;
+	private ArrayList<Territory> m_terrs;
 	
 	//Default constructor
 	public Player()
@@ -29,12 +28,22 @@ public class Player
 	public void addTerritory(Territory terr)
 	{
 		m_terrs.add(terr);
-		//TODO: Make some way for checking continent making
 	}
 	//Remove a territory from the player's ownership
 	public void removeTerritory(Territory terr)
 	{
 		m_terrs.remove(terr);
-		//TODO: Make some way for checking continent breaking
+	}
+	public String getName()
+	{
+		return m_name;
+	}
+	public boolean isHuman() 
+	{
+		return m_isHuman;
+	}
+	public int getIncome()
+	{
+		return m_income;
 	}
 }
