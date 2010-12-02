@@ -12,4 +12,9 @@ public class GameActivity extends Activity
 		setContentView(R.layout.game);
 	}
 	
+	//TODO: Make a layout and put some buttons in to set up
+	//the game and then pass that to a new game object
+	
+
+	
 }
