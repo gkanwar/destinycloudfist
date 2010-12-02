@@ -25,5 +25,15 @@ public class Game
 	public void mainLoop()
 	{
 		//TODO: Create main loop
+		//TODO: Make state machine
+		/*
+		 * state place initial units
+		 * state reinforce territory
+		 * state attack
+		 * state inBattle
+		 * state conclusion
+		 * state nextPlayer
+		 */
+		
 	}
 }
