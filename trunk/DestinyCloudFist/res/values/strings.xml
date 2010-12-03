@@ -2,4 +2,6 @@
 <resources>
     <string name="hello">Hello World, MainMenuActivity!</string>
     <string name="app_name">DestinyCloudFist</string>
+<string name="newgame">New Game</string>
+<string name="loadgame">Load Game</string>
 </resources>
