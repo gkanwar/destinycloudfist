@@ -11,4 +11,6 @@ public class NewGameActivity extends Activity
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.newgame);
 	}
+	
+	
 }

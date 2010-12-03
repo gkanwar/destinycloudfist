@@ -1,6 +1,7 @@
 package dcf.idkjava;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 public class MainMenuActivity extends Activity
@@ -13,5 +14,15 @@ public class MainMenuActivity extends Activity
 		setContentView(R.layout.mainmenu);
 	}
 	
-	//TODO: Implement buttons here
+	//Called when the New Game button is clicked
+	public void newGame()
+	{
+		startActivity(new Intent(this, NewGameActivity.class));
+	}
+	
+	//Called when the Load Game button is clicked
+	public void loadGame()
+	{
+		startActivity(new Intent(this, LoadGameActivity.class));
+	}
 }
