@@ -2,7 +2,7 @@ package dcf.idkjava;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
+import android.widget.LinearLayout;
 
 public class NewGameActivity extends Activity
 {
@@ -11,28 +11,20 @@ public class NewGameActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.newgame);
+		onFileSelected();
 	}
 	
 	public void onFileSelected()
 	{
-		View[] playerOptionViews;
-		//Get filename
-		//Read file and find max players
+		//TODO: Get filename
+		//TODO: Read file and find max players
+		
+		LinearLayout m_playerOptionsLayout = (LinearLayout) findViewById(R.id.playeroptionslayout);		
 		
 		//Loop through players and create a new view for each one
-		playerOptionViews = new View[5/*numPlayers*/];
 		for(int i = 0; i < 5/*numPlayers*/; i++)
 		{
-			playerOptionViews[i] = createPlayerOptionsView(i);
+			getLayoutInflater().inflate(R.layout.playeroption, m_playerOptionsLayout);
 		}
-	}
-	
-	public View createPlayerOptionsView(int viewNum)
-	{
-		View temp = getLayoutInflater().inflate(R.layout.playeroption, null);
-		addContentView(temp, null);
-		
-		temp.setId(viewNum);
-		return temp;
 	}
 }
