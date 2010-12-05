@@ -4,4 +4,6 @@
     <string name="app_name">DestinyCloudFist</string>
 <string name="newgame">New Game</string>
 <string name="loadgame">Load Game</string>
+<string name="humanitytext">Human?</string>
+<string name="playername">Player Name:</string>
 </resources>
