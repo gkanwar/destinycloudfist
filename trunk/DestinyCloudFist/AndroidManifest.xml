@@ -14,7 +14,7 @@
         <activity android:name=".GameActivity"
         		  android:label="@string/app_name">
         </activity>
-        <activity android:name=".LoadGameActivtiy"
+        <activity android:name=".LoadGameActivity"
         		  android:label="@string/app_name">
         </activity>
         <activity android:name=".NewGameActivity"
