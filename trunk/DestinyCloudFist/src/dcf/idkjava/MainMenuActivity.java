@@ -3,6 +3,7 @@ package dcf.idkjava;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainMenuActivity extends Activity
 {
@@ -15,13 +16,13 @@ public class MainMenuActivity extends Activity
 	}
 	
 	//Called when the New Game button is clicked
-	public void newGame()
+	public void newGame(View v)
 	{
 		startActivity(new Intent(this, NewGameActivity.class));
 	}
 	
 	//Called when the Load Game button is clicked
-	public void loadGame()
+	public void loadGame(View v)
 	{
 		startActivity(new Intent(this, LoadGameActivity.class));
 	}
