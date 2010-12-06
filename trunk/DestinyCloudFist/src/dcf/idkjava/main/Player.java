@@ -49,14 +49,17 @@ public class Player
 	
 	public void setupPhase()
 	{
-		
+		//Ask if the player wants to turn in a set of cards
+		//Let the player place m_income units
 	}
 	public void combatPhase()
 	{
-		
+		//Have the player declare all attacks and build an ArrayList of Combat objects for all of these
+		//Loop through and resolve all attacks one at a time (this requires player input)
 	}
 	public void cleanupPhase()
 	{
-		
+		//Give a card if a territory was captured
+		//Ask for final moves
 	}
 }
