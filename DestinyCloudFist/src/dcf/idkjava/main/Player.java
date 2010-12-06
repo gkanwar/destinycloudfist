@@ -46,4 +46,17 @@ public class Player
 	{
 		return m_income;
 	}
+	
+	public void setupPhase()
+	{
+		
+	}
+	public void combatPhase()
+	{
+		
+	}
+	public void cleanupPhase()
+	{
+		
+	}
 }
