@@ -102,18 +102,22 @@ public class Combat
 			if(highestAttack > highestDefend)
 			{
 				//Kill defender
+				m_numDefenders--;
 			}
 			else
 			{
 				//Kill attacker
+				m_numAttackers--;
 			}
 			if(secondHighestAttack > secondHighestDefend)
 			{
 				//Kill defender
+				m_numDefenders--;
 			}
 			else
 			{
 				//Kill attacker
+				m_numAttackers--;
 			}
 		}
 		else
@@ -121,31 +125,41 @@ public class Combat
 			if(highestAttack > highestDefend)
 			{
 				//Kill defender
+				m_numDefenders--;
 			}
 			else
 			{
 				//Kill attacker
+				m_numAttackers--;
 			}
 		}
 	}
 	
 	private boolean over()
 	{
-		return false;
-		//Stuff
+		return (m_numDefenders == 0 || m_numAttackers == 0);
 	}
 	private boolean didAttackWin()
 	{
-		return false;
-		//Stuff
+		return (m_numDefenders == 0);
 	}
 	private boolean askRetreat()
 	{
+		//Stuff
 		return false;
-		//Stuff
 	}
-	private void update(boolean thingy)
+	private void update(boolean state)
 	{
-		//Stuff
+		if(state == VICTORY)
+		{
+			//Give attacker territory
+			m_attacker.addTerritory(m_defending);
+			m_defender.removeTerritory(m_defending);
+			m_defending.setOwner(m_attacker);
+		}
+		
+		//Set attacking and defending units in territories
+		m_attacking.setUnits(m_numAttackers);
+		m_defending.setUnits(m_numDefenders);
 	}
 }

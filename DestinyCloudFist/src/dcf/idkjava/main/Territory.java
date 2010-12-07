@@ -31,8 +31,16 @@ public class Territory
 		return m_owner;
 	}
 	
+	public void setUnits(int units)
+	{
+		m_units = units;
+	}
 	public int getUnits()
 	{
 		return m_units;
+	}
+	public Continent getContinent()
+	{
+		return m_cont;
 	}
 }
