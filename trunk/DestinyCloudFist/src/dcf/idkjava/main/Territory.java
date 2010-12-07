@@ -10,6 +10,8 @@ public class Territory
 	Player m_owner;
 	//Continent that it is part of
 	Continent m_cont;
+	//Number of units on territory
+	int m_units = 0;
 	
 	public Territory()
 	{
@@ -27,5 +29,10 @@ public class Territory
 	public Player getOwner()
 	{
 		return m_owner;
+	}
+	
+	public int getUnits()
+	{
+		return m_units;
 	}
 }
