@@ -2,12 +2,12 @@ package dcf.idkjava.main;
 
 public class Combat
 {
-	private static boolean VICTORY = true;
-	private static boolean DEFEAT = false;
+	private static final boolean VICTORY = true;
+	private static final boolean DEFEAT = false;
 	
 	private Player m_attacker, m_defender;
 	private Territory m_attacking, m_defending;
-	int m_numAttackers;
+	int m_numAttackers, m_numDefenders;
 	
 	//Empty default constructor
 	public Combat() {}
@@ -19,6 +19,7 @@ public class Combat
 		m_attacker = m_attacking.getOwner();
 		m_defender = m_defending.getOwner();
 		m_numAttackers = numAttackers;
+		m_numDefenders = m_defending.getUnits();
 	}
 	
 	//Resolve the combat
@@ -98,10 +99,34 @@ public class Combat
 		
 		if(totalDice > 1)
 		{
-			//Stuff
+			if(highestAttack > highestDefend)
+			{
+				//Kill defender
+			}
+			else
+			{
+				//Kill attacker
+			}
+			if(secondHighestAttack > secondHighestDefend)
+			{
+				//Kill defender
+			}
+			else
+			{
+				//Kill attacker
+			}
 		}
-		
-		//More stuff, do later
+		else
+		{
+			if(highestAttack > highestDefend)
+			{
+				//Kill defender
+			}
+			else
+			{
+				//Kill attacker
+			}
+		}
 	}
 	
 	private boolean over()
