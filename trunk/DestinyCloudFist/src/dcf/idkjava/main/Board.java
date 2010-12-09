@@ -17,4 +17,9 @@ public class Board
 	{
 		//TODO Load the Board from the file
 	}
+	
+	public ArrayList<Territory> getTerritories()
+	{
+		return m_terrs;
+	}
 }

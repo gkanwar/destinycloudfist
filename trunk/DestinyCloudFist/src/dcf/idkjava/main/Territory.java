@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class Territory
 {
 	//Array of adjacent territories
-	ArrayList<Territory> m_adj;
+	private ArrayList<Territory> m_adj;
 	//Player who owns it
-	Player m_owner;
+	private Player m_owner;
 	//Continent that it is part of
-	Continent m_cont;
+	private Continent m_cont;
 	//Number of units on territory
 	int m_units = 0;
 	
@@ -42,5 +42,17 @@ public class Territory
 	public Continent getContinent()
 	{
 		return m_cont;
+	}
+	public boolean isAdjacent(Territory terr)
+	{
+		for(int i = 0; i < m_adj.size(); i++)
+		{
+			if(m_adj.get(i) == terr)
+			{
+				return true;
+			}
+		}
+		
+		return false;
 	}
 }
