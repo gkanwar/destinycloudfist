@@ -6,4 +6,6 @@
 <string name="loadgame">Load Game</string>
 <string name="humanitytext">Human?</string>
 <string name="playername">Player Name:</string>
+<string name="saveandquit">Save and Quit</string>
+<string name="quit">Quit</string>
 </resources>

@@ -15,7 +15,7 @@ public class Board
 	}
 	public Board(String filename)
 	{
-		//TODO Load the Board from the file
+		//TODO: Load the Board from the file
 	}
 	
 	public ArrayList<Territory> getTerritories()
