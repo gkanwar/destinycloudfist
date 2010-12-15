@@ -1,20 +1,28 @@
 package dcf.idkjava.main;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Game
+public class Game implements Serializable
 {
-	Board m_board;
-	Deck m_deck;
-	ArrayList<Player> m_players;
-	Player m_currPlayer;
-	int m_currPlayerIndex = 0;
-	boolean m_isOver = false;
+	//Has to do with Serializable
+	private static final long serialVersionUID = 8246456202242912307L;
+	//The objects used by the game (board, deck, players)
+	private Board m_board;
+	private Deck m_deck;
+	private ArrayList<Player> m_players;
+	private Player m_currPlayer;
+	//Keeps track of the current player
+	private int m_currPlayerIndex = 0;
+	//Keeps track of whether this game has ended or not
+	private boolean m_isOver = false;
 	
+	//Default constructor
 	public Game()
 	{
 		//Do nothing
 	}
+	//New game constructor
 	public Game(Board board, ArrayList<Player> players)
 	{
 		//Create a new game with the given board and array of players
@@ -22,20 +30,24 @@ public class Game
 		m_deck = new Deck(m_board);
 		m_players = players;
 	}
+	//Load game constructor
 	public Game(String filename)
 	{
-		//Load the game data from the given filename
+		//TODO: Load the game data from the given filename
 	}
 	
+	//End the game
 	public void end()
 	{
 		m_isOver = true;
 	}
+	//Check the state of the game
 	public boolean isOver()
 	{
 		return m_isOver;
 	}
 	
+	//One game loop - performs the current player's turn
 	public void mainLoop()
 	{
 		m_currPlayer = m_players.get(m_currPlayerIndex);
@@ -45,7 +57,7 @@ public class Game
 		m_currPlayerIndex = (m_currPlayerIndex+1) % m_players.size();
 	}
 	
-	//Phases in a turn
+	//Phases - setup, combat, cleanup
 	public void setupPhase(Player currPlayer)
 	{
 		//Ask if the player wants to turn in a set of cards

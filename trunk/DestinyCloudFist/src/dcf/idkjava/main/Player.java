@@ -79,7 +79,7 @@ public class Player
 		m_cards.add(givenCard);
 	}
 	
-	//UI functions
+	//UI or AI functions
 	public void askTurnInSet()
 	{
 		//Ask if the player wants to turn in a set of cards and which one they do.
