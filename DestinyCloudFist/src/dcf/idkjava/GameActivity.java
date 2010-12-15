@@ -9,8 +9,10 @@ import android.view.MenuItem;
 
 public class GameActivity extends Activity
 {
-	Game m_game;
-	Menu m_menu;
+	//The Game object being used
+	private Game m_game;
+	//A Menu object (possibly not needed)
+	private Menu m_menu;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState)
@@ -19,9 +21,20 @@ public class GameActivity extends Activity
 		setContentView(R.layout.game);
 		getMenuInflater().inflate(R.menu.optionsmenu, m_menu);
 		
+		Bundle objectBundle = getIntent().getExtras();
+		try
+		{
+			m_game = (Game) objectBundle.get("Game");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
 		loop();
 	}
 	
+	//Main activity loop
 	private void loop()
 	{
 		while(!m_game.isOver())
@@ -49,6 +62,7 @@ public class GameActivity extends Activity
 		}
 	}
 	
+	//Menu actions
 	private void saveAndQuit()
 	{
 		//TODO: Implement saving stuff here
