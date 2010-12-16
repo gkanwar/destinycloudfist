@@ -8,4 +8,5 @@
 <string name="playername">Player Name:</string>
 <string name="saveandquit">Save and Quit</string>
 <string name="quit">Quit</string>
+<string name="creategame">Create Game</string>
 </resources>
